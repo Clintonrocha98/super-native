@@ -35,3 +35,7 @@ Todos os 7 padrões de erro do baseline foram eliminados. **Skill aprovada.**
 `layouts-routing.md` deve deixar explícito: `Route::native` / `Route::nativeGroup` são **macros na facade padrão** `Illuminate\Support\Facades\Route` (confirmado em `routes/web.php:67`). Não há facade própria — use o `Route` normal.
 
 **Fechada (Task 9):** adicionada a nota na seção Roteamento + `use Illuminate\Support\Facades\Route;` nos exemplos. Re-teste do Cenário 3 confirmou: a cobaia passou a usar a facade padrão sem import órfão nem hesitação.
+
+## Smoke test (Task 10) — tarefa NOVA: tela de chat → **PASS**
+
+Cobaia fresca, tarefa não testada (lista de bolhas + input + enviar). Resultado: namespace Edge, `render(): View`, tags nativas, `native:model="draft"`, estado estilo Livewire (`messages`/`sendMessage()`), `justify-end/start` (sabe que não há `grid`), valor arbitrário `max-w-[280]`, SF Symbol `paperplane.fill`, `<native:divider/>`, `Route::native` + `StackLayout` na facade padrão. Reconheceu honestamente um limite não documentado (scroll-to-bottom). A skill generaliza para cenários inéditos.
