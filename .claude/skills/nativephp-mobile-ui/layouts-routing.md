@@ -44,9 +44,10 @@ class ItemDetail extends NativeComponent
 
 ## Roteamento
 
-Use `Route::native('/path', Component::class)` — sempre com o **path** como primeiro argumento.
+`Route::native` e `Route::nativeGroup` são **macros na facade padrão** `Illuminate\Support\Facades\Route` — use o `Route` normal do Laravel (não existe facade própria do NativePHP para rotas). Sempre passe o **path** como primeiro argumento.
 
 ```php
+use Illuminate\Support\Facades\Route;
 use App\NativeComponents\{ProductList, ProductDetail};
 use App\NativeComponents\Layouts\StackLayout;
 
@@ -144,6 +145,7 @@ public function navigationOptions(): ?\Native\Mobile\Edge\Layouts\Builders\NavBa
 
 `routes/web.php`:
 ```php
+use Illuminate\Support\Facades\Route;
 use App\NativeComponents\{ProductList, ProductDetail};
 use App\NativeComponents\Layouts\StackLayout;
 

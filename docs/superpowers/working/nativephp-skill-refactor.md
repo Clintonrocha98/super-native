@@ -33,3 +33,5 @@ Todos os 7 padrões de erro do baseline foram eliminados. **Skill aprovada.**
 ## Lacuna a fechar (Task 9)
 
 `layouts-routing.md` deve deixar explícito: `Route::native` / `Route::nativeGroup` são **macros na facade padrão** `Illuminate\Support\Facades\Route` (confirmado em `routes/web.php:67`). Não há facade própria — use o `Route` normal.
+
+**Fechada (Task 9):** adicionada a nota na seção Roteamento + `use Illuminate\Support\Facades\Route;` nos exemplos. Re-teste do Cenário 3 confirmou: a cobaia passou a usar a facade padrão sem import órfão nem hesitação.
